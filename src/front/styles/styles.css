@@ -1,0 +1,510 @@
+:root{
+  /* Definicion variables tema Happy */
+  --happy_selected: #80ED99;
+  --happy_non_selected:#57CC99;
+  --happy_contorno_global:#22577A;
+  --happy_interior_global: #38A3A5;
+  --happy_background: rgb(34,87,122);
+  --happy_gradient: linear-gradient(90deg, rgba(34,87,122,1) 0%, rgba(34,87,122,1) 50%, rgb(85, 139, 98) 100%);
+  --happy_input: #c4c4c4;
+  --light_background: #E6E6E6;
+  --light_input: #5C7AEA;
+  --dark_background: #212020;
+  /* Fin defincion variables tema Happy */
+}
+
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont,'Titillium Web',  "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container-fluid, .container {
+  width: 100%;
+  
+  
+}
+
+.navbar{
+  height: 4.6875rem;
+  background: transparent;
+  width: 100vw;
+}
+
+
+.sidebar_logo{
+  background-color: transparent;
+  font-weight: bold;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-li{
+  padding-left: 0rem;
+}
+
+.sidebar li{
+  list-style: none;
+  width: 13rem;
+  position: relative;
+  height: 4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem ;
+  font-size: 1.3rem;
+  padding-left: 0.5rem;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.sidebar li a{
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar li a .texto_menu_lateral{
+  margin-left: 1.5rem;
+}
+
+.iconos_menu_lateral{
+  font-size: 1.9rem;
+}
+
+.iconos_menu_principal {
+  font-size: 3rem;
+}
+
+.boton_toggle{
+  transition: all 0.2s ease;
+}
+
+
+.boton_toggle:hover{
+  transform: scale(1.5);
+  color: var(--happy_selected);
+}
+
+
+.footer_sidebar{
+  position:fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 13rem;
+  
+}
+
+.usuario{
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Vista Cateogria-Ingresar Nuevo Producto*/
+
+.ingresarNuevoProducto{
+  background: var(--happy_gradient);
+}
+
+.ingresarNuevoProducto .titulo{
+  background: var(--happy_non_selected);
+  border-radius: 25px;
+}
+
+
+.btn_cancelar_ingresarNuevoProducto{
+  font-size: 4rem;
+  color:red;
+  transition: all 0.4s ease;
+}
+.btn_cancelar_ingresarNuevoProducto:hover{
+  font-size: 4.5rem;
+}
+.btn_aceptar_ingresarNuevoProducto{
+  font-size: 4rem;
+  color:green;
+  transition: all 0.4s ease;
+}
+.btn_aceptar_ingresarNuevoProducto:hover{
+  font-size: 4.5rem;
+}
+
+
+
+/* Parte Joaco */
+#login-form {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: var(--happy_gradient);
+  box-sizing: border-box;
+}
+
+.login {
+  font-family: 'Titillium Web';
+  position: absolute;
+  width: 40%;
+  height: 8.625rem;
+  left: 30%;
+  top: 20%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6rem;
+  text-align: center;
+  color: var(--happy_input);
+}
+
+.login h6{
+  font-style: italic;
+}
+/* 
+.username-input input {
+  font-family: 'Titillium Web';
+  position: absolute;
+  width: 50%;
+  height: 7%;
+  left: 27%;
+  top: 30%;
+  background: var(--happy_input);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 60px;
+  padding: 1rem;
+  color: #22577a;
+  margin-top: 2%;
+}
+
+.username-input input:focus, .password-input input:focus {
+  outline: none;
+}
+
+.password-input input {
+  font-family: 'Titillium Web';
+  position: absolute;
+  width: 50%;
+  height: 7%;
+  left: 27%;
+  top: 38%;
+  background: var(--happy_input);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 60px;
+  padding: 1rem;
+  color: #22577a;
+  margin-top: 2%;
+}
+
+::placeholder {
+  color: var(--happy_background);
+  opacity: 1; 
+}
+
+:-ms-input-placeholder { 
+  color: var(--happy_background);
+}
+
+::-ms-input-placeholder { 
+  color: var(--happy_background);
+}
+
+.login-button button {
+  font-family: 'Titillium Web';
+  position: absolute;
+  width: 50%;
+  height: 7%;
+  left: 27%;
+  top: 47%;
+  background: #47af82;
+  border-color: #47af82;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  margin-top: 3%;
+}
+
+.connect-buttons button{
+  font-family: 'Titillium Web';
+  width: 22.5%;
+  position: absolute;
+  height: 7%;
+  top: 58%;
+  margin-top: 2%;
+  border-radius: 60px;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.fb {
+  left: 27%;
+}
+
+.google-btn {
+  left: 54%;
+  background: #F95B02;
+  border-color: #F95B02;
+}
+
+.google-btn:hover{
+  background-color: #c94a00;
+  border-color: #c94a00;
+  color: #fff;
+} */
+
+.totalVenta input, .Precio_Producto_A_Vender input{
+  background-color: #fff;
+  color: #000000;
+}
+
+.eliminar_producto_boleta{
+  visibility: hidden;
+}
+
+.eliminar_producto_boleta:hover{
+  visibility: visible;
+  border: none;
+  background: transparent;
+}
+.Ventana_Ventas{
+  padding-right: 20px;
+  color: white;
+ 
+}
+
+#cuadros a{
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+/* Parte Bayron */
+#cuadro1, #cuadro2, #cuadro3, #cuadro4{
+  width: 170px;
+  height: 170px;
+  margin-top: 30px;
+  margin-left: 15px;
+  background: #80ED99;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+
+#text1, #text2, #text3{
+  display: flex;
+  justify-content: center;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+  /* margin-top: -35px; */
+}
+
+
+.Themes{
+  display: flex;
+  justify-content: end;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.Theme1{
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border-right: 40px solid grey;
+  border-top: 46px solid grey;
+  border-left: 40px solid;
+  border-bottom: 43px solid;
+}
+.Theme2{
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border-right: 40px solid #59D9BA;
+  border-top: 46px solid #59D9BA;
+  border-left: 40px solid #22577A;
+  border-bottom: 43px solid #22577A;
+}
+.Theme3{
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border-right: 40px solid #ffffff;
+  border-top: 46px solid #ffffff;
+  border-left: 40px solid #3D56B2;
+  border-bottom: 43px solid #3D56B2;
+  
+}
+.color-chart {
+  border-right: 20px solid #59D9BA;
+  border-top: 20px solid #22577A;
+  border-left: 20px solid #59D9BA;
+  border-bottom: 20px solid #22577A;
+  border-radius: 100%;
+}
+.fas{
+  margin-left: 15px;
+}
+#inputss{
+  width: 100px;
+}
+#carta{
+  background: silver;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+#boton{
+  margin-left: 90px;
+}
+#dataUser{
+  width: 320px;
+  padding-top: 120px;
+  padding-left: 100px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+#dataInsert{
+  width: 300px;
+  top: 306px;
+  background: #57CC99;
+  border: none;
+}
+#insertUser{
+  width: 300px;
+  height: 50px;
+  left: 627px;
+  top: 10px;
+  background: #80ED99;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#btnClick{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  left: 600px;
+  top: 550px;
+  cursor: pointer;
+}
+#btnClick2{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  left: 700px;
+  top: 550px;
+  cursor: pointer;
+}
+.ImageProfile{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 850px;
+  top: 210px;
+  background: transparent;
+
+
+}
+.textImage{
+  position: absolute;
+  left: 750px;
+  top: 130px;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+}
+.btnClose{
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 1200px;
+  top: 70px;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 56px;
+  cursor: pointer;
+}
+
+
+/*Style Gonzalo*/
+
+#cajaVentas{
+  background: var(--happy_gradient);  
+}
+
+
+#stadistics{
+  background: #57CC99;
+  border-radius: 60px;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+}
+#tabla2{
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+}
+#tabla1{
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  
+}
+#col1, #col3{
+  margin: 5px;
+  background: #57CC99;
+}
+#col2,#titleStadistic{
+  
+  background: #80ED99;
+}
+
+/* ACA DESPUES DE LA REVISION */
+
+fotografia_producto_a_vender_Disponible{
+  visibility: visible;
+}
+fotografia_producto_a_vender_NOdisponible{
+  visibility: hidden;
+}

@@ -1,0 +1,606 @@
+:root{
+  /* Definicion variables tema Happy */
+  --happy_selected: #80ED99;
+  --happy_non_selected:#57CC99;
+  --happy_contorno_global:#22577A;
+  --happy_interior_global: #38A3A5;
+  --happy_background: #0f2b4e;
+  --happy_gradient: linear-gradient(90deg, rgba(34,87,122,1) 0%, rgba(34,87,122,1) 50%, rgb(85, 139, 98) 100%);
+  --happy_input: #c4c4c4;
+  --light_background: #E6E6E6;
+  --light_input: #5C7AEA;
+  --dark_background: #262833;
+  --dark_selected: #667ea0; 
+  --dark_notselected: #0f2b4e;
+  /* Fin defincion variables tema Happy */
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont,'Titillium Web',  "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--dark_background);
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.navbar{
+  height: 75px;
+  background: var(--dark_background);
+}
+
+.sidebar{
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  height: calc(100%-75px);
+  /* background-color: var(--dark_selected); */
+  box-shadow: 10px 5px 5px rgb(19, 18, 18);
+  border-radius: 0 15px 15px 0;
+}
+
+.sidebar_logo{
+  background-color: var(--happy_non_selected);
+  font-weight: bold;
+  height: 3rem;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-li{
+  padding-left: 0rem;
+  margin-bottom: 0;
+}
+
+.sidebar li{
+  list-style: none;
+  width: 13rem;
+  position: relative;
+  height: 4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem ;
+  font-size: 1.3rem;
+  padding-left: 0.5rem;
+  background-color: var(--dark_notselected);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sidebar li:last-of-type{
+  border-radius: 0 0 15px 0;
+}
+
+.sidebar li:first-of-type{
+  border-radius:0 15px 0 0;
+}
+
+.sidebar li:hover{
+  background-color: var(--dark_selected);
+  padding-left: 1rem;
+  
+}
+
+.sidebar li:hover .texto_menu_lateral,.sidebar li:hover .iconos_menu_lateral{
+  color: black;
+}
+.sidebar li a{
+  text-decoration: none;
+  opacity: 100%;
+  color: white;
+  font-weight: 400;
+}
+
+.sidebar li a .texto_menu_lateral{
+  margin-left: 1.5rem;
+}
+
+.iconos_menu_lateral{
+  font-size: 1.9rem;
+  color: #667ea0;
+}
+
+.iconos_menu_principal {
+  color: #667ea0;
+}
+
+#boton_toggle{
+  transition: all 0.2s ease;
+  color: var(--dark_notselected);
+}
+
+
+#boton_toggle:hover{
+  transform: scale(1.5);
+  color: white;
+}
+ .navbar .container-fluid a{
+    text-decoration: none;
+ }
+
+ .navbar .container-fluid{
+   margin-right: 0;
+   padding-right: 0;
+   margin-left: 20px;
+ }
+
+.footer_sidebar{
+  
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 13rem;
+  
+}
+
+.usuario{
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Vista Cateogria-Ingresar Nuevo Producto*/
+
+.ingresarNuevoProducto{
+  background: transparent;
+}
+
+.ingresarNuevoProducto .titulo{
+  background: var(--dark_selected);
+  border-radius: 25px;
+  color: white;
+}
+
+
+.btn_cancelar_ingresarNuevoProducto{
+  font-size: 3rem;
+  color:red;
+  transition: all 0.4s ease;
+}
+.btn_cancelar_ingresarNuevoProducto:hover{
+  font-size: 3.05rem;
+  color:#ff6765;
+}
+
+.btn_aceptar_ingresarNuevoProducto{
+  font-size: 3rem;
+  color:green;
+  transition: all 0.4s ease;
+}
+.btn_aceptar_ingresarNuevoProducto:hover{
+  font-size: 3.05rem;
+  color:var(--happy_selected)
+}
+
+
+.container-fluid-light {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: var(--light_background);
+  box-sizing: border-box;
+}
+
+.container-fluid-dark {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: var(--dark_background);
+  box-sizing: border-box;
+}
+
+
+.nombre_usuario, .permiso_usuario, .foto_usuario {
+  color: white;
+}
+
+#cuadro2 .foto_usuario{
+  color: var(--dark_selected);
+}
+#cuadro2:hover .foto_usuario{
+  color: black;
+}
+
+/* PARTE JOACO */
+.color-dark{
+  color: var(--happy_input);
+}
+.color-light{
+  color: black;
+}
+
+
+
+.login {
+  position: absolute;
+  width: 40%;
+  height: 8.625rem;
+  left: 30%;
+  top: 20%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6rem;
+  text-align: center;
+  
+}
+
+.login h6{
+  font-style: italic;
+}
+
+.username-input input {
+  position: absolute;
+  width: 50%;
+  height: 7%;
+  left: 27%;
+  top: 33%;
+  background: var(--happy_input);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 60px;
+  padding: 1rem;
+  color: #22577a;
+  
+}
+
+
+
+.username-input input:focus, .password-input input:focus {
+  outline: none;
+}
+  
+.password-input input {
+  position: absolute;
+  width: 50%;
+  height: 7%;
+  left: 27%;
+  top: 42%;
+  background: var(--happy_input);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 60px;
+  padding: 1rem;
+  color: #22577a;
+  
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--happy_background);
+  opacity: 1; /* Firefox */
+  padding-left: 5px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--happy_background);
+  padding-left: 5px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--happy_background);
+  padding-left: 5px;
+}
+
+.login-button button {
+  font-family: 'Titillium Web';
+  position: absolute;
+  width: 50%;
+  height: 7%;
+  left: 27%;
+  top: 53%;
+  background: #47af82;
+  border-color: #47af82;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  /* color:black; */
+}
+
+
+
+
+.tomodificarproducto{
+  text-decoration: none;
+  color: black;
+}
+
+/* FIN PARTE JOACO */
+
+
+
+#cuadros a{
+  list-style: none;
+  text-decoration: none;
+  color: var(--dark_selected);
+}
+
+#cuadros:hover{
+  color: black;
+}
+
+/* Parte Bayron */
+#cuadro1, #cuadro2, #cuadro3, #cuadro4{
+  width: 170px;
+  height: 170px;
+  margin-top: 30px;
+  margin-left: 15px;
+  background: var(--dark_notselected);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+#cuadro1:hover #text1, #cuadro2:hover #text2,#cuadro3:hover #text3, #cuadro1:hover .iconos_menu_principal, #cuadro2:hover .iconos_menu_principal,#cuadro3:hover .iconos_menu_principal{
+  color: black;
+}
+#cuadro1:hover, #cuadro2:hover, #cuadro3:hover {
+  background-color: var(--dark_selected);
+}
+
+
+
+
+#text1, #text2, #text3{
+  display: flex;
+  justify-content: center;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  color: white;
+  /* margin-top: -35px; */
+}
+
+
+.Themes{
+  display: flex;
+  justify-content: end;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.Theme1{
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border-right: 40px solid grey;
+  border-top: 46px solid grey;
+  border-left: 40px solid;
+  border-bottom: 43px solid;
+}
+.Theme2{
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border-right: 40px solid #59D9BA;
+  border-top: 46px solid #59D9BA;
+  border-left: 40px solid #22577A;
+  border-bottom: 43px solid #22577A;
+}
+.Theme3{
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border-right: 40px solid #ffffff;
+  border-top: 46px solid #ffffff;
+  border-left: 40px solid #3D56B2;
+  border-bottom: 43px solid #3D56B2;
+  
+}
+.color-chart {
+  border-right: 20px solid #59D9BA;
+  border-top: 20px solid #22577A;
+  border-left: 20px solid #59D9BA;
+  border-bottom: 20px solid #22577A;
+  border-radius: 100%;
+}
+.fas{
+  margin-left: 15px;
+}
+
+.foto_inicio {
+  margin: 0;
+}
+
+#inputss{
+  width: 100px;
+}
+#carta{
+  background: silver;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+#boton{
+  margin-left: 90px;
+}
+#dataUser{
+  width: 320px;
+  padding-top: 120px;
+  padding-left: 100px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+#dataInsert{
+  width: 300px;
+  top: 306px;
+  background: #57CC99;
+  border: none;
+}
+#insertUser{
+  width: 300px;
+  height: 50px;
+  left: 627px;
+  top: 10px;
+  background: #80ED99;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#btnClick{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  left: 600px;
+  top: 550px;
+  cursor: pointer;
+}
+#btnClick2{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  left: 700px;
+  top: 550px;
+  cursor: pointer;
+}
+.ImageProfile{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 850px;
+  top: 210px;
+  background: transparent;
+
+
+}
+.textImage{
+  position: absolute;
+  left: 750px;
+  top: 130px;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+}
+.btnClose{
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 1200px;
+  top: 70px;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 56px;
+  cursor: pointer;
+}
+
+
+
+.invalido{
+  color:red
+}
+
+.algo{
+  width: 60%;
+  background: var(--dark_selected);
+  border: 1px solid var(--dark_notselected);
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+  cursor: pointer;
+  padding-left: 2px;
+}
+.algo:hover{
+  background: var(--happy_interior_global);
+  cursor: pointer;  
+  
+}
+
+.activo {
+  width: 13rem;
+  overflow: hidden;
+  transition: all ease .5s  
+}
+.no_activo {
+  width: 3.5rem;
+  overflow: hidden;
+  transition: all ease .5s
+  
+}
+.Ventana_Ventas{
+  padding-right: 20px;
+  color: white;
+  
+}
+
+
+.Ventana_Ventas form .Contenedor_Buscar_Elemento_A_Vender input, .ingresarNuevoProducto form input{
+  background-color: var(--dark_selected);
+  color: white;
+}
+
+.contenedor_foto_boton{
+  height: 60vh;
+}
+
+
+#stadistics{
+  background: var(--dark_selected);
+  color: #fff;
+  border-radius: 60px;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+}
+#tabla2{
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+}
+#tabla1{
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  
+}
+#col1, #col3{
+  margin: 5px;
+  background: var(--dark_selected);
+}
+#col2, #titleStadistic{
+  background: var(--dark_notselected);
+  color: #fff;
+  padding: 5px 0;
+}
+
+
+@media  (max-width: 830px) {
+  .sidebar{
+    width: 4rem;
+  }
+}
+
+
+
